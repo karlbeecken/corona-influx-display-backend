@@ -10,7 +10,8 @@ router.get("/berlin", async (req, res, next) => {
   let incidence: any = await getIncidence();
   if (incidence) {
     let rate: any = incidence["rate"];
-    res.send(Math.floor(rate).toString());
+    let rounded: any = Math.round(rate * 10) / 10;
+    res.send(Math.floor(rounded).toString());
   }
 });
 
