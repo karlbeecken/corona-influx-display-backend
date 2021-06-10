@@ -71,7 +71,7 @@ async function getIncidence(): Promise<object> {
         },
       };
 
-      for (let i = res.data.index.length - 7; i < res.data.index.length; i++) {
+      for (let i = 0; i < 7; i++) {
         let count =
           parseInt(res.data.index[i].mitte) +
           parseInt(res.data.index[i].friedrichshain_kreuzberg) +
